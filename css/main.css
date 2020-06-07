@@ -1,0 +1,309 @@
+/* Fonts */
+@font-face {
+  font-family: "Courier New";
+  src: url("../fonts/cour.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Courier New";
+  src: url("../fonts/cour.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+.hero-banner {
+  position: relative;
+}
+.hero-banner img {
+  width: 100%;
+  max-height: 100vh;
+}
+@media (max-width: 991px) {
+  .hero-banner img {
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.hero-banner .banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner .banner-overlay .banner-overlay-content {
+  text-align: center;
+}
+.hero-banner .banner-overlay .banner-overlay-content h1 {
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .hero-banner .banner-overlay .banner-overlay-content h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero-banner .banner-overlay .banner-overlay-content span {
+  font-family: "Courier New";
+  font-weight: 400;
+  display: block;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.hero-banner .banner-overlay .banner-overlay-content .hero-btn {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #f3f3f3;
+  border: 1.5px solid #f3f3f3;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.content-block {
+  padding-top: 5rem;
+}
+.content-block .featured-products {
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .content-block .featured-products {
+    padding-bottom: 1rem;
+  }
+}
+.content-block .featured-products .product-container {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.content-block .featured-products .product-container .product-frame {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+.content-block .featured-products .product-container .product-frame img {
+  width: 100%;
+}
+.content-block .featured-products .product-container .product-details {
+  padding-top: 1rem;
+}
+@media (min-width: 991px) {
+  .content-block .featured-products .product-container .product-details {
+    height: 5rem;
+  }
+}
+.content-block .featured-products .product-container .product-details span {
+  font-family: "Courier New";
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #2c2c2c;
+}
+.content-block .featured-products .product-container .product-details p {
+  font-family: "Courier New";
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #2c2c2c;
+}
+@media (min-width: 991px) {
+  .content-block .featured-products .center-frame {
+    width: 100%;
+  }
+}
+.content-block .category-display {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+.content-block .category-display .category-image img {
+  width: 100%;
+  padding: 0 1rem;
+}
+.content-block .category-display .category-content {
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  text-align: center;
+}
+.content-block .category-display .category-content p {
+  font-family: "Courier New";
+  font-weight: 400;
+  color: #535353;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+.content-block .category-display .category-content .category-label {
+  font-size: 3rem;
+  position: relative;
+  letter-spacing: 0.1rem;
+  line-height: 3.2rem;
+  color: black;
+}
+.content-block .category-display .category-content .category-label:after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  left: 50%;
+  bottom: 0;
+  border-top: 1px solid black;
+  transform: translateX(-50%);
+}
+.content-block .view-all-btn {
+  color: #535353;
+  font-family: "Courier New";
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 2rem 0;
+  text-decoration: none;
+  position: relative;
+}
+.content-block .view-all-btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #707070;
+}
+h2 {
+  font-family: "Courier New";
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+header span {
+  font-family: "Baskerville";
+  font-size: 2.8rem;
+  display: block;
+}
+header .menu-bar {
+  font-size: 2rem;
+}
+footer {
+  background: #f7f6f2;
+  padding: 3rem 0;
+}
+footer .footer-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  footer .footer-container .footer-col {
+    margin-bottom: 3rem;
+  }
+}
+footer .footer-container .label {
+  font-family: "Courier New";
+  font-weight: 400;
+  color: black;
+  font-size: 1.2rem;
+  display: block;
+  padding-bottom: 1.5rem;
+}
+footer .footer-container ul {
+  padding: 0;
+  list-style-type: none;
+  font-family: "Courier New";
+  font-weight: 400;
+  margin-bottom: 0;
+}
+footer .footer-container ul li {
+  text-transform: uppercase;
+}
+footer .footer-container .social-links {
+  display: flex;
+}
+footer .footer-container .social-links a {
+  font-size: 2rem;
+  padding-right: 2rem;
+  color: #484848;
+}
+footer .footer-container .footer-6 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .footer-container .footer-6 img {
+  max-width: 80px;
+}
+footer .footer-container .footer-6 p {
+  font-family: "Courier New";
+  font-weight: 400;
+  margin: 0;
+}
+footer .footer-container .footer-6 .footer-text {
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 991px) {
+  footer .footer-container .footer-6 .footer-text {
+    padding-top: 2rem;
+  }
+}
+a,
+a:focus {
+  outline: none;
+  text-decoration: none !important;
+  color: #000;
+  color: initial;
+}
+a:hover,
+a:focus:hover {
+  color: #000;
+  color: initial;
+  opacity: 0.8;
+}
+.slick-slide:focus {
+  outline: none;
+}
+.slick-dots li button:before {
+  content: "";
+  background-color: black;
+  height: 1px;
+}
