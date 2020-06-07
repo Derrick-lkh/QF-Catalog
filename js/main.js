@@ -1,12 +1,9 @@
 $(document).ready(function () {
-  console.log("ready!");
-
   var lastScrollTop = 0;
   $(window).scroll(function (event) {
     var st = $(this).scrollTop();
-    if (st > lastScrollTop) {
+    if (st > lastScrollTop && st > 0) {
       // downscroll code
-      console.log("scroll down");
       $("#nav-bar").css({
         top: "-100px",
       });
