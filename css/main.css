@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Fonts */
 @font-face {
   font-family: "Courier New";
@@ -22,6 +23,9 @@
   src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+}
+main {
+  min-height: 100vh;
 }
 .hero-banner {
   position: relative;
@@ -88,6 +92,146 @@
 }
 .content-block {
   padding-top: 5rem;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+@media (max-width: 991px) {
+  .content-block {
+    width: 100%;
+  }
+}
+.content-block .product-information {
+  font-family: "Courier New";
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-block .product-information .product-frame img {
+  width: 100%;
+}
+@media (min-width: 991px) {
+  .content-block .product-information .product-details {
+    padding-left: 1rem;
+  }
+}
+.content-block .product-information .product-details span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+.content-block .product-information .product-details .product-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #2c2c2c;
+}
+.content-block .product-information .product-details .product-description {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+.content-block .product-information .product-details .collapse-info {
+  padding-top: 1rem;
+}
+.content-block .product-information .product-details .collapse-info .collapse-section {
+  display: none;
+}
+.content-block .product-information .product-details .collapse-info .label {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #707070;
+  padding: 0 0.5rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.content-block .product-information .product-details .collapse-info .details {
+  font-size: 1rem;
+  letter-spacing: 0;
+  padding: 0 0.5rem;
+}
+.content-block .product-information .product-details .collapse-info table {
+  width: 100%;
+}
+.content-block .product-information .product-details .collapse-info table tr {
+  display: flex;
+  justify-content: space-between;
+}
+.content-block .product-information .product-details .collapse-info table tr p {
+  margin: 0;
+}
+.content-block .product-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-block .product-display .product-container {
+  display: block;
+  margin-bottom: 2rem;
+}
+.content-block .product-display .product-container .product-frame {
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+.content-block .product-display .product-container .product-frame img {
+  width: 100%;
+}
+.content-block .product-display .product-container .product-details {
+  padding-top: 1rem;
+}
+.content-block .product-display .product-container .product-details span {
+  font-family: "Courier New";
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #2c2c2c;
+}
+.content-block .product-display .product-container .product-details p {
+  font-family: "Courier New";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+.content-block .product-filter {
+  font-family: "Courier New";
+  color: #2c2c2c;
+}
+.content-block .product-filter .collapse-info {
+  padding-bottom: 1rem;
+}
+.content-block .product-filter .collapse-info .collapse-section {
+  display: none;
+}
+.content-block .product-filter .collapse-info.active .collapse-section {
+  display: block;
+}
+.content-block .product-filter ul {
+  list-style-type: none;
+  padding: 0;
+}
+.content-block .product-filter .category-filter p {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  border-bottom: 1px solid #707070;
+  padding: 0 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.content-block .product-filter .category-filter p .fas {
+  font-size: 0.8rem;
+  color: #2c2c2c;
+}
+.content-block .product-filter .category-filter ul {
+  padding: 0.5rem 0 1rem 1rem;
+}
+.content-block .product-filter .category-filter ul .active {
+  color: #d93535;
 }
 .content-block .featured-products {
   padding: 2rem 0;
@@ -207,6 +351,41 @@ h2 {
   letter-spacing: 0.25rem;
   text-align: center;
 }
+.breadcrumbs {
+  padding-bottom: 1rem;
+}
+.breadcrumbs ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .breadcrumbs ul {
+    flex-wrap: wrap;
+  }
+}
+.breadcrumbs ul li {
+  padding-right: 1rem;
+  font-size: 0.9rem;
+}
+.breadcrumbs ul li a {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs ul li a:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-left: 0.5rem;
+}
+.breadcrumbs ul li:last-child {
+  padding-right: 0;
+}
+.breadcrumbs ul li:last-child a:after {
+  content: none;
+}
 header {
   position: fixed;
   z-index: 5;
@@ -231,6 +410,7 @@ header .menu-bar {
 footer {
   background: #f7f6f2;
   padding: 3rem 0;
+  margin-top: 10rem;
 }
 footer .footer-container {
   width: 90%;

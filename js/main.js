@@ -44,4 +44,15 @@ $(document).ready(function () {
     }
   });
   $(window).trigger("resize");
+
+  // Collapse Btn
+  $(".collapse-info .label").on("click", function () {
+    const icon = $(this).find("i");
+    if (icon.hasClass("fa-plus")) {
+      icon.removeClass("fa-plus").addClass("fa-minus");
+    } else {
+      icon.removeClass("fa-minus").addClass("fa-plus");
+    }
+    $(this).parent().find(".collapse-section").slideToggle();
+  });
 });
