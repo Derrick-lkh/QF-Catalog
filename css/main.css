@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Courier New";
-  src: url("../fonts/cour.ttf") format("truetype");
+  src: url("../fonts/cour-bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -24,15 +24,15 @@
   font-weight: bold;
   font-style: normal;
 }
-main {
-  min-height: 100vh;
-}
 .hero-banner {
   position: relative;
 }
 .hero-banner img {
   width: 100%;
   max-height: 100vh;
+  min-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 991px) {
   .hero-banner img {
@@ -77,6 +77,23 @@ main {
   margin: 0 auto;
   padding: 1rem 0;
 }
+.hero-banner .banner-overlay .banner-overlay-content .title {
+  font-family: "optima";
+  font-weight: bold;
+  font-size: 4.5rem;
+  letter-spacing: 1rem;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+}
+.hero-banner .banner-overlay .banner-overlay-content .slogan {
+  font-family: "Courier New";
+  font-weight: 400;
+  display: block;
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
 .hero-banner .banner-overlay .banner-overlay-content .hero-btn {
   font-family: "Montserrat";
   font-weight: 700;
@@ -91,9 +108,9 @@ main {
   text-transform: uppercase;
 }
 .content-block {
-  padding-top: 5rem;
   width: 90%;
   margin: 0 auto;
+  margin-top: 5rem;
   max-width: 1280px;
 }
 @media (max-width: 991px) {
@@ -390,7 +407,18 @@ header {
   position: fixed;
   z-index: 5;
   width: 100%;
+  top: 0;
   transition: all 0.5s ease;
+}
+header .transparent-bg {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
 }
 header .nav-container {
   display: flex;
@@ -399,12 +427,43 @@ header .nav-container {
   width: 90%;
   margin: 0 auto;
 }
+header a {
+  cursor: pointer;
+}
 header span {
   font-family: "Baskerville";
   font-size: 2.8rem;
   display: block;
 }
 header .menu-bar {
+  font-size: 2rem;
+}
+header .side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  min-width: 350px;
+  background-color: #1b1b30;
+  font-family: "Courier New";
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  transition: all 0.5s ease;
+}
+header .side-menu .close-btn {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+}
+header .side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+header .side-menu ul li a {
+  color: white;
   font-size: 2rem;
 }
 footer {
@@ -477,12 +536,17 @@ a:focus {
   text-decoration: none !important;
   color: #000;
   color: initial;
+  transition: all 0.3s ease;
 }
 a:hover,
 a:focus:hover {
   color: #000;
   color: initial;
-  opacity: 0.8;
+  letter-spacing: 0.1rem;
+}
+a:hover img,
+a:focus:hover img {
+  transform: scale(1.1);
 }
 .slick-slide:focus {
   outline: none;

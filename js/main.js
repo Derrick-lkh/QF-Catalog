@@ -1,4 +1,26 @@
 $(document).ready(function () {
+  // Nav
+
+  $(".menu-bar, .close-btn").on("click", function () {
+    console.log("clicked");
+    if ($(".side-menu").hasClass("menu-open")) {
+      $(".side-menu")
+        .css({
+          left: "-100%",
+        })
+        .removeClass("menu-open");
+      $(".transparent-bg").hide();
+    } else {
+      $(".side-menu")
+        .css({
+          left: 0,
+        })
+        .addClass("menu-open");
+      $(".transparent-bg").show();
+    }
+  });
+
+  // Scroll
   var lastScrollTop = 0;
   $(window).scroll(function (event) {
     var st = $(this).scrollTop();
@@ -25,6 +47,7 @@ $(document).ready(function () {
     }
   });
 
+  // Resize
   $(window).resize(function () {
     var slider = $(".featured-products");
     var settings = {
@@ -44,15 +67,4 @@ $(document).ready(function () {
     }
   });
   $(window).trigger("resize");
-
-  // Collapse Btn
-  $(".collapse-info .label").on("click", function () {
-    const icon = $(this).find("i");
-    if (icon.hasClass("fa-plus")) {
-      icon.removeClass("fa-plus").addClass("fa-minus");
-    } else {
-      icon.removeClass("fa-minus").addClass("fa-plus");
-    }
-    $(this).parent().find(".collapse-section").slideToggle();
-  });
 });
