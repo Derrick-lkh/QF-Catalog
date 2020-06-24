@@ -1,8 +1,9 @@
 {
   "routes": [
     { "src": "/", "dest": "/index.html" },
-       { "src": "/catalog", "dest": "/catalog.html" },
-          { "src": "/product", "dest": "/product.html" },
+    { "src": "/index", "dest": "/index.html" },
+    { "src": "/catalog", "dest": "/catalog.html" },
+    { "src": "/product", "dest": "/product.html" },
     { "src": "/redirect", "status": 308, "headers": { "Location": "/index.html" } }
   ]
 }
